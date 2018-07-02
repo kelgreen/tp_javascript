@@ -58,9 +58,37 @@ function consignes(evt) {
 }
 
 function jouer(evt) {
-    player = document.getElementById("joueurlettreid");
     player.focus();
     if (player.value===""){
-
+        alert("Vous devez taper 1 lettre!");
     }
-}
+    else{
+        if(enjouant){
+        let obj;
+        let lettretap;
+        let lettre;
+        let search;
+        lettre = player.value;
+        player.valeu="";
+        bonchoix=false;
+        search = motchoisi.match(lettre);
+        while (search!=null){
+            lettretap=motchoisi.search(lettre);
+            obj=document.getElementById("lettre"+lettretap).value="lettre";
+            motchoisi=motchoisi.replace(lettre,"0");
+            bonchoix++;
+            search=motchoisi.match(lettre);
+            bonchoix=true;
+        }if(!bonchoix){
+                document.getElementById("lettrestapees").innerHTML+=lettre.toUpperCase();
+                mauvais++;
+                if(mauvais<4){
+                    partiesimg[mauvais].style.display="block";
+                } else {
+                    document.getElementById("msg").innerHTML="Jeu perdu";
+                    enjouant=false;
+                    }
+                }
+            }
+        }
+    }
