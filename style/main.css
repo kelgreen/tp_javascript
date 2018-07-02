@@ -1,0 +1,51 @@
+body {
+    padding-top: 3.5rem;
+}
+.lettre{
+    width: 30px;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 5px;
+    display: none;
+}
+.joueurlettrec{
+    width: 30px;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 5px;
+}
+.joueurdisplay{
+    display: block;
+}
+#pendu{
+    margin-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 800px;
+    position: relative;
+}
+#penduvide{
+     position: absolute;
+ }
+#tete{
+    position: absolute;
+    top: 60px;
+    left: 214px;
+}
+#corps{
+    position: absolute;
+    top: 134px;
+    left: 181px;
+}
+#jambe{
+    position: absolute;
+    top: 248px;
+    left: 206px;
+}
+#pied{
+    position: absolute;
+    top: 300px;
+    left: 214px;
+}
+
