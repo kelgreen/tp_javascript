@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link href="style/main.css" rel="stylesheet">
+    <title>Mousquetaire pendu</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+    <body>
+        <!-- nav -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <h1>Mousquetaire Pendu</h1>
+            <div id="nouveaujeu">
+                <button>Nouveau Jeu</button>
+            </div>
+            <div>
+                <input type="text" id="lettre01" class="lettre" maxlength="1">
+                <input type="text" id="lettre02" class="lettre" maxlength="1">
+                <input type="text" id="lettre03" class="lettre" maxlength="1">
+                <input type="text" id="lettre04" class="lettre" maxlength="1">
+                <input type="text" id="lettre05" class="lettre" maxlength="1">
+                <input type="text" id="lettre06" class="lettre" maxlength="1">
+                <input type="text" id="lettre07" class="lettre" maxlength="1">
+                <input type="text" id="lettre08" class="lettre" maxlength="1">
+                <input type="text" id="lettre09" class="lettre" maxlength="1">
+                <input type="text" id="lettre10" class="lettre" maxlength="1">
+                <input type="text" id="lettre11" class="lettre" maxlength="1">
+                <input type="text" id="lettre12" class="lettre" maxlength="1">
+                <input type="text" id="lettre13" class="lettre" maxlength="1">
+                <input type="text" id="lettre14" class="lettre" maxlength="1">
+                <input type="text" id="lettre15" class="lettre" maxlength="1">
+            </div>
+            <div id="joueur" class="joueurdisplay">
+                    <div id="joueurcontroles" >
+                        <input type="text" id="joueurlettreid" class="joueurlettrec">
+                        <button id="consignes">Consignes</button>
+                        <button id="jouer">Jouer</button>
+                        <div id="msg"></div>
+                        <div id="lettrestapees"><p> lettre déjà tapé</p></div>
+                    </div>
+                <div id="pendu">
+                    <img id="penduvide" src="images/forcavazia.png" alt="head">
+                    <img id="tete" src="images/cabeca.png" alt="head">
+                    <img id="corps" src="images/corpo.png" alt="">
+                    <img id="jambe" src="images/perna.png" alt="">
+                    <img id="pied" src="images/pe.png" alt="">
+                </div>
+            </div>
+
+        </main>
+        <footer class="text-center">
+            <div class="container">
+                <hr>
+                <p>&copy; Company 2017</p>
+            </div>
+        </footer>
+    </body>
+<script src="script/main.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</body>
+</html>
