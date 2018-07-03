@@ -19,13 +19,12 @@ document.getElementById("consignes").addEventListener("click",consignes);
 document.getElementById("jouer").addEventListener("click",jouer);
 
 function lettredefini(l) {
-    let obj;
-    for (let i=0;i<16;i++){
-        obj = document.getElementById("lettre"+i).value="";
-        obj = document.getElementById("lettre"+i).style.display="none";
+    for (let i=0;i<15;i++){
+        document.getElementById("lettre"+i).value="";
+        document.getElementById("lettre"+i).style.display="none";
     }
     for(let i=0;i<l;i++){
-        obj = document.getElementById("lettre"+i).style.display="inline-block";
+        document.getElementById("lettre"+i).style.display="inline-block";
     }
 }
 
@@ -41,7 +40,7 @@ function debut(evt) {
     pos = Math.round(Math.random()*quantite);
     motchoisi = mots[pos];
     mottaille = motchoisi.length;
-    lettredefini = (mottaille);
+    lettredefini(mottaille);
     document.getElementById("msg").innerHTML="";
     partiesimg[1]=document.getElementById("tete");
     partiesimg[2]=document.getElementById("corps");
@@ -68,27 +67,51 @@ function jouer(evt) {
         let lettretap;
         let lettre;
         let search;
+        let lettrechoisie = false;
         lettre = player.value;
-        player.valeu="";
+        player.value="";
         bonchoix=false;
         search = motchoisi.match(lettre);
+
+        if(boitelettre.length > 0){
+            for(let x = 0; x < boitelettre.length; x++){
+                if(lettre.toUpperCase() === boitelettre[x]){
+                    lettrechoisie = true;
+                }
+            }
+        }
+
+        if(lettrechoisie === false){
         while (search!=null){
             lettretap=motchoisi.search(lettre);
-            obj=document.getElementById("lettre"+lettretap).value="lettre";
+            document.getElementById("lettre"+lettretap).value=lettre;
             motchoisi=motchoisi.replace(lettre,"0");
             bonchoix++;
             search=motchoisi.match(lettre);
             bonchoix=true;
         }if(!bonchoix){
+                boitelettre[boitelettre.length] = lettre.toUpperCase();
                 document.getElementById("lettrestapees").innerHTML+=lettre.toUpperCase();
                 mauvais++;
-                if(mauvais<4){
+                if(mauvais < mauvaismax){
                     partiesimg[mauvais].style.display="block";
                 } else {
+                    partiesimg[mauvais].style.display="block";
                     document.getElementById("msg").innerHTML="Jeu perdu";
                     enjouant=false;
                     }
                 }
+                if(bonchoix===mottaille){
+            document.getElementById("msg").innerHTML="";
+            document.getElementById("msg").innerHTML="Felicitation,vous avez gagné le jeu";
+            enjouant=false;
             }
+            }else{
+            alert("Vous avez déjà taper cette lettre!");
+        }
+        }
+
         }
     }
+
+    window.addEventListener("load", debut);
