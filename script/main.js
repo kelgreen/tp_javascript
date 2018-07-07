@@ -1,6 +1,18 @@
 
 "use strict";
-let mots =["javascript","react","angular","bootstrap","html","css"];
+
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+     if (window.pageYOffset >= 50) {
+         document.getElementById("navbar").style.backgroundColor = "red";
+    } else {
+         document.getElementById("navbar").style.backgroundColor = "transparent";
+
+    }
+}
+
+// PENDU
+let mots =["javascript","react","angular","bootstrap","html","css", "macaco"];
 let quantite = mots.length-1;
 let pos = Math.round(Math.random()*quantite);
 let motchoisi = mots[pos];
@@ -11,6 +23,7 @@ let mauvaismax = 4;
 let mauvais = 0;
 let partiesimg = [];
 let bonchoix = false;
+let bonchoixtaille; 
 let enjouant = false;
 let player;
 
@@ -36,6 +49,7 @@ function debut(evt) {
     correct = 0;
     mauvais = 0;
     bonchoix = false;
+    bonchoixtaille = 0;
     document.getElementById("lettrestapees").innerHTML="Lettres Tapées:";
     pos = Math.round(Math.random()*quantite);
     motchoisi = mots[pos];
@@ -82,14 +96,16 @@ function jouer(evt) {
         }
 
         if(lettrechoisie === false){
-        while (search!=null){
-            lettretap=motchoisi.search(lettre);
-            document.getElementById("lettre"+lettretap).value=lettre;
-            motchoisi=motchoisi.replace(lettre,"0");
-            bonchoix++;
-            search=motchoisi.match(lettre);
-            bonchoix=true;
-        }if(!bonchoix){
+            while (search!=null){
+                lettretap=motchoisi.search(lettre);
+                document.getElementById("lettre"+lettretap).value=lettre;
+                motchoisi=motchoisi.replace(lettre,"0");
+                alert(bonchoixtaille);
+                bonchoixtaille++;
+                search=motchoisi.match(lettre);
+                bonchoix=true;
+            }
+            if(!bonchoix){
                 boitelettre[boitelettre.length] = lettre.toUpperCase();
                 document.getElementById("lettrestapees").innerHTML+=lettre.toUpperCase();
                 mauvais++;
@@ -100,18 +116,19 @@ function jouer(evt) {
                     document.getElementById("msg").innerHTML="Jeu perdu";
                     enjouant=false;
                     }
-                }
-                if(bonchoix===mottaille){
-            document.getElementById("msg").innerHTML="";
-            document.getElementById("msg").innerHTML="Felicitation,vous avez gagné le jeu";
-            enjouant=false;
             }
-            }else{
+            if(bonchoixtaille===mottaille){
+                document.getElementById("msg").innerHTML="";
+                document.getElementById("msg").innerHTML="Felicitation,vous avez gagné le jeu";
+                enjouant=false;
+            }
+
+        }
+        else{
             alert("Vous avez déjà taper cette lettre!");
         }
         }
-
-        }
     }
+}
 
-    window.addEventListener("load", debut);
+window.addEventListener("load", debut);
