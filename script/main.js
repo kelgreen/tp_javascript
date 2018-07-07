@@ -4,12 +4,15 @@
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
      if (window.pageYOffset >= 50) {
-         document.getElementById("navbar").style.backgroundColor = "red";
+         document.getElementById("navbar").style.backgroundColor = "#0B0B0B";
+         document.getElementById("navbar").style.opacity = "0.8";
     } else {
          document.getElementById("navbar").style.backgroundColor = "transparent";
 
     }
 }
+
+$('.carousel').carousel()
 
 // PENDU
 let mots =["javascript","react","angular","bootstrap","html","css", "macaco"];
