@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    font-family:'Roboto';
+    font-family: 'Roboto', sans-serif;
 }
 
 #bgimg{
@@ -62,25 +62,19 @@ nav span{
     transition: transform .5s, background-color .5s, color .5s;
 }
 .side-menu ul li:nth-child(1) {
-    background-color: #00aced;
+    background-color: #9d0101;
 }
 .side-menu ul li:nth-child(2) {
-    background-color: #3b5998;
+    background-color: #7b7f81;
 }
 .side-menu ul li:nth-child(3) {
-    background-color: #00a300;
+    background-color: #9d0101;
 }
 .side-menu ul li:nth-child(4) {
-    background-color: #1e7145;
-}
-.side-menu ul li:nth-child(5) {
-    background-color: #ffc40d;
-}
-.side-menu ul li:nth-child(6) {
-    background-color: #cb2027;
+    background-color: #7b7f81;
 }
 .side-menu ul li:hover {
-    background-color: #339966;
+    background-color: #000000;
     -webkit-transform: translateX(10em);
     transform: translateX(10em);
 }
@@ -102,35 +96,63 @@ nav span{
     right: 0.16666666666667em;
     color: #F8F6FF;
 }
-
-
-.carousel-control-prev-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+#actu{
+    color:#9d0101;
+    margin-top: 40px;
+  }
+.col li{
+    list-style-type: none;
+    color: #9d0101;
+}
+.col ul{
+    margin-top: 10px;
 }
 
-.carousel-control-next-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
-}
-#fullpage section {
+#bgimg {
     height: 100vh;
+}
+
+
+#fullpage #two {
+    background-color: white;
+    height: 60vh;
 }
 
 #fullpage section:nth-child(3) {
     background-color: white;
+    height: 100vh;
 }
 
 #fullpage section:nth-child(4) {
     background-color: white;
+    height: 100vh;
 }
 
 #fullpage section:nth-child(5) {
-    background-color: rgb(62, 43, 77);
+    background-color: rgba(157, 1, 1, 0.12);
+    height: 100vh;
 }
 
 #fullpage section:nth-child(6) {
-    background-color: rgb(82, 150, 184);
+    background-color: white;
+    height: 60vh;
 }
-
+#formdiv{
+    padding-top: 50px;
+    width: 70%;
+    margin: auto;
+    color:#9d0101;
+}
+#formdiv legend{
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+#divbtnf{
+    text-align: center;
+}
+#divbtnf button{
+    width: 150px;
+}
 .lettre{
     width: 30px;
     font-size: 30px;
