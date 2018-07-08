@@ -12,7 +12,25 @@ function scrollFunction() {
     }
 }
 
-$('.carousel').carousel()
+
+/*
+$(document).ready(function(){
+    $('a[href*=#]').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+            && location.hostname == this.hostname) {
+            let $target = $(this.hash);
+            $target = $target.length && $target
+                || $('[name=' + this.hash.slice(1) +']');
+            if ($target.length) {
+                let targetOffset = $target.offset().top;
+                $('html,body')
+                    .animate({scrollTop: targetOffset}, 800);
+                return false;
+            }
+        }
+    });
+});
+*/
 
 // PENDU
 let mots =["javascript","react","angular","bootstrap","html","css", "macaco"];
@@ -29,6 +47,7 @@ let bonchoix = false;
 let bonchoixtaille; 
 let enjouant = false;
 let player;
+let consignemot =["Langage de programmation de scripts","Bibliothèque JavaScript","Plate-forme d'applications web open-source","Collection d'outils utile à la création du design","Langage de balisage","Feuille de style"];
 
 document.getElementById("btnnouveaujeu").addEventListener("click",debut);
 document.getElementById("consignes").addEventListener("click",consignes);
@@ -69,7 +88,7 @@ function debut(evt) {
 }
 
 function consignes(evt) {
-    alert("consignes");
+    alert(consignemot[pos]);
     player.focus();
 }
 
@@ -103,7 +122,6 @@ function jouer(evt) {
                 lettretap=motchoisi.search(lettre);
                 document.getElementById("lettre"+lettretap).value=lettre;
                 motchoisi=motchoisi.replace(lettre,"0");
-                alert(bonchoixtaille);
                 bonchoixtaille++;
                 search=motchoisi.match(lettre);
                 bonchoix=true;

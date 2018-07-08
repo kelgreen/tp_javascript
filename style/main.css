@@ -114,16 +114,6 @@ nav span{
 #fullpage section {
     height: 100vh;
 }
-/*
-
-#fullpage section:nth-child(1) {
-    background-color: white;
-}
-
-#fullpage section:nth-child(2) {
-    background-color: white;
-}
-*/
 
 #fullpage section:nth-child(3) {
     background-color: white;
@@ -140,7 +130,6 @@ nav span{
 #fullpage section:nth-child(6) {
     background-color: rgb(82, 150, 184);
 }
-
 
 .lettre{
     width: 30px;
