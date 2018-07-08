@@ -118,6 +118,20 @@ nav span{
     height: 60vh;
 }
 
+#fullpage #two h2{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+#fullpage #three{
+    height: 60vh;
+    background-color: rgba(123, 127, 129, 0.09);
+}
+
+#fullpage #three h2{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
 #fullpage section:nth-child(3) {
     background-color: white;
     height: 100vh;
