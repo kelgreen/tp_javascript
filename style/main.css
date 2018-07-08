@@ -143,6 +143,15 @@ nav span{
     margin: auto;
     color:#9d0101;
 }
+h6 a{
+    color:#9d0101;
+}
+footer{
+    color: white;
+}
+#divbtnf button{
+    background-color: #9d0101;
+}
 #formdiv legend{
     padding-bottom: 20px;
     font-weight: bold;
